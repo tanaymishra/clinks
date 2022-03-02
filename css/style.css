@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  background: #0f111a;
+  font-size: 62.5%;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container ul .li:hover > .line {
+  background: #ff00d6;
+  width: 5ch;
+  height: 0.1ch;
+}
+
+.container ul .li:hover h3 {
+  color: #fff;
+  text-shadow: 0px 0px 8px #fff;
+}
+
+.container ul .li:hover .up {
+  -webkit-transform: translateX(-2%);
+          transform: translateX(-2%);
+}
+
+.container ul .li:hover .down {
+  -webkit-transform: translateX(2%);
+          transform: translateX(2%);
+}
+
+.container ul .li:hover .up.t, .container ul .li:hover .down.t, .container ul .li:hover .line.t {
+  -webkit-transform: rotateX(3deg);
+          transform: rotateX(3deg);
+}
+
+.container ul .li:hover .up.m, .container ul .li:hover .down.m, .container ul .li:hover .line.m {
+  -webkit-transform: rotateY(1deg);
+          transform: rotateY(1deg);
+}
+
+.container ul .li {
+  font-family: cursive;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 100px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-perspective: 10px;
+          perspective: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  font-size: 6rem;
+  color: #ff00d6;
+}
+
+.container ul .li h3 {
+  text-shadow: 0px 0px 16px #ff00d6;
+  position: absolute;
+  -webkit-transition: 1s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  transition: 1s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+}
+
+.container ul .li .up {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 60%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 60%);
+}
+
+.container ul .li .down {
+  -webkit-clip-path: polygon(0% 60%, 100% 60%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 60%, 100% 60%, 100% 100%, 0% 100%);
+}
+
+.container ul .li .line {
+  position: absolute;
+  width: 0ch;
+  height: 0ch;
+  top: 1.5ch;
+  border-radius: 50rem;
+  background: #ff00d6;
+  -webkit-transition: 0.3s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  transition: 0.3s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+}
+/*# sourceMappingURL=style.css.map */
